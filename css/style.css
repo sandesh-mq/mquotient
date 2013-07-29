@@ -158,10 +158,14 @@ body {
 }
 
 .wrapper {
-  padding: 0 1.5em;
+  padding: 40px 20px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+}
+
+#cover .wrapper {
+  padding: 0px 20px;
 }
 
 /*h1 {
@@ -446,10 +450,6 @@ section {
 
 #about {
   background-color: #449bb5;
-}
-
-#aboutcontainer {
-  padding-top: 40px;
 }
 
 #products {

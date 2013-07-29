@@ -4,6 +4,7 @@ function resizePages() {
 	var h = $(window).height();
 	sectionHeight  =  h < 600 ? 600 : h;
 	$('section#cover').css('height',sectionHeight);
+	$('section').css('min-height',sectionHeight);
 	$('.wrapper').each(function () {
 		$(this).css('height',$(this).closest('section').height() + 85);
 	});

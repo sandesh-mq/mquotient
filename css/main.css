@@ -61,3 +61,37 @@
 	-webkit-box-shadow: inset 0 0 4px rgba(0,0,0,0.5);
 	box-shadow: inset 0 0 4px rgba(0,0,0,0.5);
 }
+
+.profile-btn {
+	max-width: 212px;
+}
+.page-txt {
+	font-size: 1.3em;
+	line-height: 1.5;
+	color: #fff;
+}
+.page-txt p {
+	padding-bottom: 1em;
+}
+
+#about .span6 {
+	padding-top: 1em;
+}
+
+#about h1 {
+	text-align: right;
+	color: #fff;
+	font-family: 'PT Sans Caption', 'Open Sans', sans-serif;
+	font-size: 5em;
+}
+
+#team h1 {
+	font-size: 5em;
+	color: #fff;
+	line-height: 1em;
+	padding-bottom: 1em;
+}
+
+.secondary {
+	font-weight: 400;
+}
