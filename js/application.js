@@ -3,15 +3,32 @@ var sectionHeight = 600;
 function resizePages() {
 	var h = $(window).height();
 	sectionHeight  =  h < 600 ? 600 : h;
+	
+	// Each sections height
 	$('section#cover').css('height',sectionHeight);
 	$('section').css('min-height',sectionHeight);
 	$('.wrapper').each(function () {
-		$(this).css('height',$(this).closest('section').height() + 85);
+		$(this).css('min-height',$(this).closest('section').height() - 100);
 	});
 
-
+	// Home Page height adjust
 	$('#covercontainer h1').css('padding-top',sectionHeight/2-95);
 	$('#covercontainer .navcontainer').css('padding-top',sectionHeight/2);
+
+	// Flip Images height and width
+	$('.front .pad').each(function () {
+		var $frontPad = $(this),
+			$backPad = $(this).closest('.panel').find('.back .pad');
+		if($frontPad.height() > $backPad.height()) {
+			$backPad.height($frontPad.height());
+			$(this).closest('.custom-profile').height($frontPad.height());
+		}
+		else {
+			$frontPad.height($backPad.height());
+			$(this).closest('.custom-profile').height($backPad.height());
+		}
+
+	});
 }
 
 
@@ -55,25 +72,43 @@ $(document).ready(function() {
         var top = $(document).scrollTop();
 		var wHeight = Math.max(640,$(window).height());
 		// Shift navigation element to top
-		console.log(top);
 		if(top >= (sectionHeight / 2 + $('.navcontainer').height())) {
 			$('#footer').css({
+				opacity: 1,
 				top: 0
 			});
 		}
 		else {
 			$('#footer').css({
+				opacity: 0,
 				top: -30
 			});
 		}
-    }, 500));
+
+		$('section:not(:last)').each(function () {
+			if((window.scrollY + 200) >= this.offsetTop && (window.scrollY + 200) < $(this).next()[0].offsetTop) {
+				var self = this;
+				$('#footer li a:not(:first)').each(function(){
+					if($(this).data('id') == self.id) {
+						$('#footer .active').removeClass('active');	
+						$(this).addClass('active');	
+					}
+				});
+			}
+		});
+
+		if((window.scrollY + 200) > $('section:last')[0].offsetTop) {
+			$('#footer .active').removeClass('active');	
+			$('#footer a:last').addClass('active');	
+		}
+    }, 300));
 
     // Flip
-    $('.hover').hover(function(){
-		$(this).addClass('flip');
-	},function(){
-		$(this).removeClass('flip');
-	})
+    $('.hover').click(function(){
+		$(this).toggleClass('flip');
+	});
+
+	
     
 });
 
