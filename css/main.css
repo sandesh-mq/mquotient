@@ -11,6 +11,7 @@
 }
 
 #footer {
+	background: rgb(223, 223, 223);
 	position: fixed;
 	left: 0px;
 	top: -30px;
@@ -26,10 +27,8 @@
 }
 
 #footer .navcontainer li {
-	background: rgb(223, 223, 223);
-	padding: 8px;
-	box-shadow: 0 0 3px rgba(0,0,0,0.6);
-	margin-right: -3px;
+	padding: 8px 5px 8px 4px;
+	margin-right: -4px;
 }
 
 #footer .navcontainer li:first-child {
@@ -54,7 +53,7 @@
 
 .navcontainer ul li a {
 	text-decoration: none;
-	padding: 3px 16px 4px;
+	padding: 3px 10px 4px;
 	color: #fff;
 	border-radius: 10px;
 	position: relative;
@@ -88,11 +87,13 @@
 .profile-btn {
 	max-width: 212px;
 }
+
 .page-txt {
 	font-size: 1.3em;
 	line-height: 1.5;
 	color: #748B96;
 }
+
 .page-txt p {
 	padding-bottom: 1em;
 }
@@ -125,9 +126,14 @@
 }
 
 .custom-profile {
-	padding-top: 12px;
-	/*background-color: #eff0f2;*/
-	border-radius: 6px;
+	background-color: #eff0f2;
+}
+
+custom-profile-image-div, .custom-profile-image {
+	width: 100%;
+}
+
+.custom-profile-info {
 	padding: 10px;
 }
 
@@ -135,21 +141,13 @@
 	width: 100%;
 }
 
-
-address {
-	text-align: right;
-}
-
+#contactuscontainer .form-horizontal,
 #contactuscontainer {
-	color: white;
-}
-
-#contactuscontainer .form-horizontal{
-	padding-top: 20px;
+	margin-top: 20px;
 }
 
 .carousel-caption {
-	background: rgba(255, 255, 255, 0.75);
+	background: rgba(134, 134, 134, 0.75);
 }
 
 
@@ -171,15 +169,15 @@ address {
 	padding: 1px 4px 1px 3px;
 }
 
-.email-us {
-	color: white !important;
-}
-
 #team, #cover {
 	background-color: #fff;
 	-webkit-box-shadow: 0px 0px 15px #FFFFFF;
 	box-shadow: 0px 0px 15px rgba(0,0,0,0.3);
 	z-index: 4;
+}
+
+.img-polaroid.custom-image-polaroid {
+	padding: 15px;
 }
 /*Flip*/
 .panel {
@@ -277,3 +275,15 @@ address {
 	-moz-transform: rotateX(0deg);
 }
 
+/*Responsive Css*/
+@media (max-width: 479px) {
+	body {
+		font-size: 10px;
+	}	
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+	body {
+		font-size: 12px;
+	}
+}

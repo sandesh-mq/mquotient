@@ -307,8 +307,12 @@ border-radius: 4px;
   background-color: #fff;
 }
 
-#contactus {
+#careers {
   background-color: #CC0021;
+}
+
+#contactus {
+  background-color: #fff;
 }
 
 @keyframes "think" {
