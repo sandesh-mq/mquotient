@@ -88,16 +88,16 @@ $(document).ready(function() {
 				var self = this;
 				$('#footer li a:not(:first)').each(function(){
 					if($(this).data('id') == self.id) {
-						$('#footer .active').removeClass('active');	
-						$(this).addClass('active');	
+						$('#footer .active').removeClass('active').parent().removeClass('active');	
+						$(this).addClass('active').parent().addClass('active');	
 					}
 				});
 			}
 		});
 
 		if((window.scrollY + 200) > $('section:last')[0].offsetTop) {
-			$('#footer .active').removeClass('active');	
-			$('#footer a:last').addClass('active');	
+			$('#footer .active').removeClass('active').parent().removeClass('active');	
+			$('#footer a:last').addClass('active').parent().addClass('active');	
 		}
     }, 300));
     
