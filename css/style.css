@@ -257,6 +257,8 @@ border-radius: 4px;
 
 .down img {
   padding: 5px;
+  box-shadow: 0 0 5px 1px rgba(0,0,0,.3);
+  border-radius: 5px;
 }
 
 .down a:hover {
@@ -295,24 +297,15 @@ border-radius: 4px;
   letter-spacing: -4px;
 }
 
-#about {
-  background-color: #fff;
-}
-
-#products {
-  background-color: #CC0021;
-}
-
+#about,
+#contactus,
 #team {
   background-color: #fff;
 }
 
+#products,
 #careers {
-  background-color: #CC0021;
-}
-
-#contactus {
-  background-color: #fff;
+  background-color: #CC0000;
 }
 
 @keyframes "think" {

@@ -66,8 +66,6 @@ $(document).ready(function() {
 
 
 	//scroll
-		
-
 	$(window).scroll(_.throttle(function(e){
         var top = $(document).scrollTop();
 		var wHeight = Math.max(640,$(window).height());
@@ -102,13 +100,6 @@ $(document).ready(function() {
 			$('#footer a:last').addClass('active');	
 		}
     }, 300));
-
-    // Flip
-    $('.hover').click(function(){
-		$(this).toggleClass('flip');
-	});
-
-	
     
 });
 

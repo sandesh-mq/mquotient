@@ -1,0 +1,35 @@
+<div class="row-fluid">
+	<!-- For loop start -->
+	<%_.forEach(emplyoees, function (employee) {%>
+	<div class="span3 center">
+	  <div class="custom-profile">
+	  	<div class="custom-profile-image-div">
+      	<img class="custom-profile-image" alt="<%=employee.name%>'s Avatar" id="avatar2" src="<%=employee.imgSource%>">
+      </div>
+
+      <div class="custom-profile-info">
+        	<p><b><%=employee.name%> <%=employee.sirname%></b></p>
+					<p>
+          	<%=employee.position%>
+          </p>
+          <div class="space-12"></div>
+          <p>
+          	<a href="<%=employee.linkedin%>" class="label custom-label">
+            	<i class="icon-linkedin-sign icon-2x"></i>
+          	</a>
+								
+          	<a href="<%=employee.twitter%>" class="label custom-label">
+            	<i class="icon-twitter-sign icon-2x"></i>
+          	</a>
+
+          	<a href="<%=employee.github%>" class="label custom-label">
+            	<i class="icon-github-sign icon-2x"></i>
+          	</a>
+        	</p>
+      </div>
+	  </div>
+	  
+	  <div class="space-12"></div>
+	</div><!--/span-->
+	<%});%>
+</div>
