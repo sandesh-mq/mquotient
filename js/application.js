@@ -12,7 +12,9 @@ function resizePages() {
 	});
 
 	// Home Page height adjust
-	$('#covercontainer h1').css('padding-top',sectionHeight/2-95);
+	var bodyFontSize = $('body').css('font-size').slice(0,2),
+		mquotientFontSize = bodyFontSize * 8;
+	$('#covercontainer h1').css('padding-top',sectionHeight/2 - (mquotientFontSize * 1.3));
 	$('#covercontainer .navcontainer').css('padding-top',sectionHeight/2);
 
 	// Flip Images height and width
@@ -63,7 +65,6 @@ $(document).ready(function() {
 		resizePages();
 	});
 	resizePages();
-
 
 	//scroll
 	$(window).scroll(_.throttle(function(e){
